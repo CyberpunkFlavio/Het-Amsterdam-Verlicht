@@ -54,6 +54,7 @@ nav ul li a:hover {
 
 main {
     padding: 100px 0 40px; /* Padding superiore aumentato per compensare l'header fisso */
+    margin-top: 60px; /* Margine superiore aggiunto */
 }
 
 main h2 {
