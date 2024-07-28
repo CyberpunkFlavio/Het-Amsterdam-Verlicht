@@ -1,6 +1,5 @@
-// JavaScript source code
 document.addEventListener("DOMContentLoaded", function() {
-    const apiKey = '8a54471bf7134e8faaa172625242807'; // Replace with your WeatherAPI key
+    const apiKey = 'YOUR_API_KEY'; // Replace with your WeatherAPI key
     const city = 'Amsterdam';
     const apiUrl = `https://api.weatherapi.com/v1/current.json?key=${apiKey}&q=${city}&aqi=no`;
 
@@ -13,8 +12,8 @@ document.addEventListener("DOMContentLoaded", function() {
             const iconUrl = data.current.condition.icon;
 
             weatherWidget.innerHTML = `
-                <img src="${iconUrl}" alt="Weather Icon">
-                <p>Temperatura: ${temperature} °C</p>
+                <img src="${iconUrl}" alt="Icona Meteo">
+                <p>Temperatura: ${temperature} &deg;C</p>
                 <p>Condizione: ${weatherDescription}</p>
             `;
         })
