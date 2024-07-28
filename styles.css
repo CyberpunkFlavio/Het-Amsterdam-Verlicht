@@ -17,6 +17,10 @@ header {
     padding: 20px 0;
     border-bottom: 3px solid #00ffff;
     text-align: center;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
 }
 
 header h1 {
@@ -49,7 +53,7 @@ nav ul li a:hover {
 }
 
 main {
-    padding: 40px 0;
+    padding: 100px 0 40px; /* Padding superiore aumentato per compensare l'header fisso */
 }
 
 main h2 {
@@ -59,9 +63,38 @@ main h2 {
     margin-bottom: 20px;
 }
 
+.featured {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.featured img {
+    width: 100%;
+    max-height: 400px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.featured .text {
+    margin-top: 15px;
+}
+
+.featured h3 {
+    margin: 10px 0;
+    font-size: 2em;
+    color: #ff00ff;
+}
+
+.news-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
 article {
     background-color: #1a1a1a;
-    margin-bottom: 20px;
     padding: 20px;
     border: 1px solid #333;
     border-radius: 10px;
@@ -80,6 +113,7 @@ article img {
 
 article .text {
     margin-top: 15px;
+    text-align: center;
 }
 
 article h3 {
@@ -98,11 +132,20 @@ article a {
     font-weight: bold;
 }
 
+.comment {
+    background-color: #1a1a1a;
+    padding: 10px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #333;
+}
+
 footer {
     background-color: #151515;
     text-align: center;
     padding: 20px 0;
     border-top: 3px solid #00ffff;
+    margin-top: 40px;
 }
 
 footer p {
@@ -123,5 +166,9 @@ footer p {
 
     article img {
         width: 100%;
+    }
+
+    .featured h3 {
+        font-size: 1.5em;
     }
 }
